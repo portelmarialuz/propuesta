@@ -88,3 +88,20 @@ button{
         opacity:0;
     }
 }
+
+.estrella{
+    position:absolute;
+    background:white;
+    border-radius:50%;
+    opacity:0.8;
+    animation:parpadear 2s infinite;
+}
+
+@keyframes parpadear{
+    0%,100%{
+        opacity:0.2;
+    }
+    50%{
+        opacity:1;
+    }
+}
