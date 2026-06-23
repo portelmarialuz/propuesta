@@ -1,6 +1,6 @@
 function aceptar() {
     document.getElementById("mensaje").innerHTML =
-        "🥰 ¡Sabía que dirías que sí! Será una cita increíble ❤️";
+        "🥰 ¡Sabía que dirías que sí! Será una cogida increíble ❤️";
 }
 
 window.onload = function () {
