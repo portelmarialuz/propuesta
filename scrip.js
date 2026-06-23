@@ -1,35 +1,37 @@
-function aceptar(){
+function aceptar() {
     document.getElementById("mensaje").innerHTML =
-    "🥰 ¡Sabía que dirías que sí! Será una cita increíble ❤️";
+        "🥰 ¡Sabía que dirías que sí! Será una cita increíble ❤️";
 }
 
-const botonNo = document.getElementById("no");
+window.onload = function () {
 
-botonNo.addEventListener("mouseover", () => {
-    const x = Math.random() * (window.innerWidth - 120);
-    const y = Math.random() * (window.innerHeight - 80);
+    const botonNo = document.getElementById("no");
 
-    botonNo.style.position = "absolute";
-    botonNo.style.left = x + "px";
-    botonNo.style.top = y + "px";
-});
+    botonNo.addEventListener("mouseover", () => {
+        const x = Math.random() * (window.innerWidth - 120);
+        const y = Math.random() * (window.innerHeight - 80);
 
-// Corazones flotando
-function crearCorazon(){
-    const corazon = document.createElement("div");
+        botonNo.style.position = "absolute";
+        botonNo.style.left = x + "px";
+        botonNo.style.top = y + "px";
+    });
 
-    corazon.classList.add("corazon");
-    corazon.innerHTML = "❤️";
+    function crearCorazon() {
+        const corazon = document.createElement("div");
 
-    corazon.style.left = Math.random() * window.innerWidth + "px";
-    corazon.style.fontSize = (Math.random() * 25 + 15) + "px";
-    corazon.style.animationDuration = (Math.random() * 5 + 5) + "s";
+        corazon.classList.add("corazon");
+        corazon.innerHTML = "❤️";
 
-    document.body.appendChild(corazon);
+        corazon.style.left = Math.random() * window.innerWidth + "px";
+        corazon.style.fontSize = (Math.random() * 25 + 15) + "px";
+        corazon.style.animationDuration = (Math.random() * 5 + 5) + "s";
 
-    setTimeout(() => {
-        corazon.remove();
-    }, 10000);
-}
+        document.body.appendChild(corazon);
 
-setInterval(crearCorazon, 300);
+        setTimeout(() => {
+            corazon.remove();
+        }, 10000);
+    }
+
+    setInterval(crearCorazon, 300);
+};
